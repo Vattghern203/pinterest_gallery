@@ -1,0 +1,72 @@
+*
+*::after
+*::before {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(32, 32, 32);
+    column-count: 3;
+    column-gap: 4px;
+}
+
+.main__img {
+    width: 100%;
+    border-radius: 4px;
+    transition: all ease-in .8s;
+    animation: fadeIn 10s ease-in 1 normal backwards;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+}
+
+.main__img:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        column-count: 5;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+       column-count: 2;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+       column-count: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        width: 0%;
+    }
+
+    50% {
+        opacity: 0;
+        width: 50%;
+    }
+
+    70% {
+        opacity: 0;
+        width: 70%;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+
+
+}
+
